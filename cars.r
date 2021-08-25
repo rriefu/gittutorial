@@ -13,3 +13,7 @@ mtcars$am <- factor(mtcars$am,levels=c(0,1),
 mtcars$cyl <- factor(mtcars$cyl,levels=c(4,6,8),
    labels=c("4cyl","6cyl","8cyl"))
 head(mtcars)
+
+qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5),
+   main="Distribution of Gas Milage", xlab="Miles Per Gallon",
+   ylab="Density")
